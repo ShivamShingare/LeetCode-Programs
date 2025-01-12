@@ -1,0 +1,22 @@
+class Solution 
+{
+    
+    public int[] numberGame(int[] nums) 
+{
+    Arrays.sort(nums);
+    int n = nums.length;  
+    int ans[] = new int[n];
+    int alice = 0;
+    int bob = 0;
+        
+    for(int i=1;i<n;i+=2)
+    {
+      bob = nums[i];
+      alice = nums[i-1];
+        
+      ans[i-1] = bob;
+      ans[i] = alice;
+    }
+        return ans;
+}
+}
